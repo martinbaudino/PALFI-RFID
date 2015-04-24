@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1429577126 source:c:\users\fmazzaferro\desktop\rfid\rfid software\rfid soft\puertoserie\comunicacion.c
+	"com/serial.h"
+
+1298731186 c:\users\fmazzaferro\desktop\rfid\rfid software\rfid soft\puertoserie\com\serial.h
+	"seriewindows.h"
+	"serielinux.h"
+
+1429044948 c:\users\fmazzaferro\desktop\rfid\rfid software\rfid soft\puertoserie\com\seriewindows.h
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	"baudios.h"
+
+1298723558 c:\users\fmazzaferro\desktop\rfid\rfid software\rfid soft\puertoserie\com\baudios.h
+
+1298734720 c:\users\fmazzaferro\desktop\rfid\rfid software\rfid soft\puertoserie\com\serielinux.h
+	<stdio.h>
+	<string.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<sys/time.h>
+	<termios.h>
+	<pthread.h>
+
+1429622865 source:c:\users\fmazzaferro\desktop\rfid\rfid software\rfid soft\main_soft.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

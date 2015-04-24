@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1429012514 source:d:\microcontroladores\proyectos\programa controlador2\puertoserie2\main.c
+	"com/serial.h"
+
+1298731186 d:\microcontroladores\proyectos\programa controlador2\puertoserie2\com\serial.h
+	"seriewindows.h"
+	"serielinux.h"
+
+1428951189 d:\microcontroladores\proyectos\programa controlador2\puertoserie2\com\seriewindows.h
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	"baudios.h"
+
+1298723558 d:\microcontroladores\proyectos\programa controlador2\puertoserie2\com\baudios.h
+
+1298734720 d:\microcontroladores\proyectos\programa controlador2\puertoserie2\com\serielinux.h
+	<stdio.h>
+	<string.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<sys/time.h>
+	<termios.h>
+	<pthread.h>
+
