@@ -1,0 +1,618 @@
+******************************************************************************
+                  MSP430 Linker PC v4.4.4                      
+******************************************************************************
+>> Linked Tue Apr 28 19:01:12 2015
+
+OUTPUT FILE NAME:   <MSP430TestCodeExamples.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00008c2e
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SFR                   00000000   00000010  00000000  00000010  RWIX
+  PERIPHERALS_8BIT      00000010   000000f0  00000000  000000f0  RWIX
+  PERIPHERALS_16BIT     00000100   00000100  00000000  00000100  RWIX
+  RAM                   00000200   00000400  00000094  0000036c  RWIX
+  INFOD                 00001000   00000040  00000000  00000040  RWIX
+  INFOC                 00001040   00000040  00000000  00000040  RWIX
+  INFOB                 00001080   00000040  00000000  00000040  RWIX
+  INFOA                 000010c0   00000040  00000000  00000040  RWIX
+  FLASH                 00008000   00007fde  00000e03  000071db  RWIX
+  INT00                 0000ffe0   00000002  00000002  00000000  RWIX
+  INT01                 0000ffe2   00000002  00000002  00000000  RWIX
+  INT02                 0000ffe4   00000002  00000002  00000000  RWIX
+  INT03                 0000ffe6   00000002  00000002  00000000  RWIX
+  INT04                 0000ffe8   00000002  00000002  00000000  RWIX
+  INT05                 0000ffea   00000002  00000002  00000000  RWIX
+  INT06                 0000ffec   00000002  00000002  00000000  RWIX
+  INT07                 0000ffee   00000002  00000002  00000000  RWIX
+  INT08                 0000fff0   00000002  00000002  00000000  RWIX
+  INT09                 0000fff2   00000002  00000002  00000000  RWIX
+  INT10                 0000fff4   00000002  00000002  00000000  RWIX
+  INT11                 0000fff6   00000002  00000002  00000000  RWIX
+  INT12                 0000fff8   00000002  00000002  00000000  RWIX
+  INT13                 0000fffa   00000002  00000002  00000000  RWIX
+  INT14                 0000fffc   00000002  00000002  00000000  RWIX
+  RESET                 0000fffe   00000002  00000002  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.bss       0    00000200    00000044     UNINITIALIZED
+                  00000200    0000002f     SPI_Stack.obj (.bss)
+                  0000022f    00000001     SPI_LowLevel.obj (.bss)
+                  00000230    00000014     PaLFI Demo.obj (.bss)
+
+.stack     0    000005b0    00000050     UNINITIALIZED
+                  000005b0    00000002     rts430.lib : boot.obj (.stack)
+                  000005b2    0000004e     --HOLE--
+
+.text      0    00008000    00000dd0     
+                  00008000    000001e8     PaLFI Demo.obj (.text:autotrim)
+                  000081e8    000001c0     PaLFI Demo.obj (.text:main)
+                  000083a8    00000116     rts430.lib : _printfi_min.obj (.text:_setfield)
+                  000084be    000000cc     DCO_Library.obj (.text)
+                  0000858a    000000ca     rts430.lib : _printfi_min.obj (.text:__TI_printfi_minimal)
+                  00008654    0000007c     SPI_Stack.obj (.text:SPI_Program_UserPage)
+                  000086d0    00000056     rts430.lib : _printfi_min.obj (.text:_ltostr)
+                  00008726    0000004e     SPI_Stack.obj (.text:SPI_Read_SerialNum)
+                  00008774    0000004e     SPI_Stack.obj (.text:SPI_Read_UserPage)
+                  000087c2    0000004e     rts430.lib : _printfi_min.obj (.text:_pproc_diouxp)
+                  00008810    0000004c     SPI_Stack.obj (.text:SPI_Read_CU_Data)
+                  0000885c    0000004c     SPI_Stack.obj (.text:SPI_Write_CU_Data)
+                  000088a8    0000004c     rts430.lib : lsr16.obj (.text)
+                  000088f4    00000048     SPI_LowLevel.obj (.text:MSP430_SPI_Tx)
+                  0000893c    00000048     rts430.lib : autoinit.obj (.text:_auto_init)
+                  00008984    00000048                : _printfi_min.obj (.text:_pproc_str)
+                  000089cc    00000046     SPI_LowLevel.obj (.text:MSP430_SPI_Rx)
+                  00008a12    00000046     SPI_Stack.obj (.text:SPI_CLKA_ON)
+                  00008a58    00000044     SPI_Stack.obj (.text:SPI_Read_PCU_State)
+                  00008a9c    00000038     rts430.lib : sprintf.obj (.text:sprintf)
+                  00008ad4    00000034     SPI_LowLevel.obj (.text:MSP430_SPI_Init)
+                  00008b08    00000032     SPI_Stack.obj (.text:SPI_CLKA_OFF)
+                  00008b3a    0000002e     rts430.lib : _printfi_min.obj (.text:_getarg_diouxp)
+                  00008b68    0000002a     SPI_Stack.obj (.text:SPI_TRIM_WO_PROG)
+                  00008b92    0000002a     SPI_Stack.obj (.text:SPI_TRIM_W_PROG)
+                  00008bbc    0000001e     SPI_Stack.obj (.text:SPI_Power_Down)
+                  00008bda    0000001c     PaLFI Demo.obj (.text:Delay_500ms)
+                  00008bf6    0000001c     SPI_Stack.obj (.text:SPI_Buf_Set_Output_Byte)
+                  00008c12    0000001c     PaLFI Demo.obj (.text:Toggle_LED_500ms)
+                  00008c2e    0000001a     rts430.lib : boot_special.obj (.text:_c_int00_noargs_noexit)
+                  00008c48    0000001a                : sprintf.obj (.text:_outs)
+                  00008c62    0000001a                : memccpy.obj (.text:memccpy)
+                  00008c7c    00000018     SPI_Stack.obj (.text:SPI_Buf_Send)
+                  00008c94    00000018     rts430.lib : _printfi_min.obj (.text:_div)
+                  00008cac    00000016     SPI_LowLevel.obj (.text:Wake_PaLFI)
+                  00008cc2    00000016     rts430.lib : div16u.obj (.text)
+                  00008cd8    00000014                : memset.obj (.text:memset)
+                  00008cec    00000014                : mult16.obj (.text)
+                  00008d00    00000012     SPI_Stack.obj (.text:SPI_Buf_Set_Telegram_Length)
+                  00008d12    00000012     rts430.lib : sprintf.obj (.text:_outc)
+                  00008d24    00000012                : memcpy.obj (.text:memcpy)
+                  00008d36    00000010     PaLFI Demo.obj (.text:PORT1_ISR)
+                  00008d46    00000010     PaLFI Demo.obj (.text:PORT2_ISR)
+                  00008d56    00000010     SPI_LowLevel.obj (.text:Stop_SPI_WDT)
+                  00008d66    00000010     rts430.lib : epilog.obj (.text)
+                  00008d76    0000000e                : strlen.obj (.text:strlen)
+                  00008d84    0000000c     SPI_Stack.obj (.text:SPI_Set_Up_Telegram)
+                  00008d90    00000008     PaLFI Demo.obj (.text:ADC10_ISR)
+                  00008d98    00000008     SPI_LowLevel.obj (.text:ErrorMode)
+                  00008da0    00000008     PaLFI Demo.obj (.text:Timer_A)
+                  00008da8    00000008     SPI_LowLevel.obj (.text:Wait_for_Busy_low)
+                  00008db0    00000006     PaLFI Demo.obj (.text:LED_OFF)
+                  00008db6    00000006     PaLFI Demo.obj (.text:LED_ON)
+                  00008dbc    00000006     SPI_Stack.obj (.text:SPI_Buf_Reset)
+                  00008dc2    00000006     rts430.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
+                  00008dc8    00000004                : pre_init.obj (.text:_system_pre_init)
+                  00008dcc    00000004                : exit.obj (.text:abort)
+
+.const     0    00008dd0    0000002b     
+                  00008dd0    00000014     rts430.lib : _printfi_min.obj (.const:.string)
+                  00008de4    00000012     PaLFI Demo.obj (.const:.string)
+                  00008df6    00000005     PaLFI Demo.obj (.const:.string:$P$T0$1)
+
+.cinit     0    00008dfc    00000008     
+                  00008dfc    00000005     PaLFI Demo.obj (.cinit)
+                  00008e01    00000001     --HOLE-- [fill = 0]
+                  00008e02    00000002     (.pad.cinit) [fill = 0]
+
+.pinit     0    00008000    00000000     UNINITIALIZED
+
+.int00     0    0000ffe0    00000002     
+                  0000ffe0    00000002     rts430.lib : int00.obj (.int00)
+
+.int01     0    0000ffe2    00000002     
+                  0000ffe2    00000002     rts430.lib : int01.obj (.int01)
+
+.int02     0    0000ffe4    00000002     
+                  0000ffe4    00000002     PaLFI Demo.obj (.int02)
+
+.int03     0    0000ffe6    00000002     
+                  0000ffe6    00000002     PaLFI Demo.obj (.int03)
+
+.int04     0    0000ffe8    00000002     
+                  0000ffe8    00000002     rts430.lib : int04.obj (.int04)
+
+.int05     0    0000ffea    00000002     
+                  0000ffea    00000002     PaLFI Demo.obj (.int05)
+
+.int06     0    0000ffec    00000002     
+                  0000ffec    00000002     rts430.lib : int06.obj (.int06)
+
+.int07     0    0000ffee    00000002     
+                  0000ffee    00000002     rts430.lib : int07.obj (.int07)
+
+.int08     0    0000fff0    00000002     
+                  0000fff0    00000002     rts430.lib : int08.obj (.int08)
+
+.int09     0    0000fff2    00000002     
+                  0000fff2    00000002     PaLFI Demo.obj (.int09)
+
+.int10     0    0000fff4    00000002     
+                  0000fff4    00000002     rts430.lib : int10.obj (.int10)
+
+.int11     0    0000fff6    00000002     
+                  0000fff6    00000002     rts430.lib : int11.obj (.int11)
+
+.int12     0    0000fff8    00000002     
+                  0000fff8    00000002     rts430.lib : int12.obj (.int12)
+
+.int13     0    0000fffa    00000002     
+                  0000fffa    00000002     rts430.lib : int13.obj (.int13)
+
+.int14     0    0000fffc    00000002     
+                  0000fffc    00000002     rts430.lib : int14.obj (.int14)
+
+.reset     0    0000fffe    00000002     
+                  0000fffe    00000002     rts430.lib : boot.obj (.reset)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                       
+-------   ----                       
+00000200  .bss                       
+00008000  .text                      
+0000004a  ADC10AE0                   
+0000004b  ADC10AE1                   
+000001b0  ADC10CTL0                  
+000001b2  ADC10CTL1                  
+00000048  ADC10DTC0                  
+00000049  ADC10DTC1                  
+000001b4  ADC10MEM                   
+000001bc  ADC10SA                    
+00008d90  ADC10_ISR                  
+00000057  BCSCTL1                    
+00000058  BCSCTL2                    
+00000053  BCSCTL3                    
+00008dcc  C$$EXIT                    
+000010fb  CALBC1_12MHZ               
+000010f9  CALBC1_16MHZ               
+000010ff  CALBC1_1MHZ                
+000010fd  CALBC1_8MHZ                
+000010fa  CALDCO_12MHZ               
+000010f8  CALDCO_16MHZ               
+000010fe  CALDCO_1MHZ                
+000010fc  CALDCO_8MHZ                
+00000056  DCOCTL                     
+00008bda  Delay_500ms                
+00008d98  ErrorMode                  
+00000128  FCTL1                      
+0000012a  FCTL2                      
+0000012c  FCTL3                      
+00000000  IE1                        
+00000001  IE2                        
+00000002  IFG1                       
+00000003  IFG2                       
+000088a8  I_LSR                      
+000088ee  I_LSR_1                    
+000088ca  I_LSR_10                   
+000088c6  I_LSR_11                   
+000088c2  I_LSR_12                   
+000088be  I_LSR_13                   
+000088ba  I_LSR_14                   
+000088b6  I_LSR_15                   
+000088ea  I_LSR_2                    
+000088e6  I_LSR_3                    
+000088e2  I_LSR_4                    
+000088de  I_LSR_5                    
+000088da  I_LSR_6                    
+000088d6  I_LSR_7                    
+000088d2  I_LSR_8                    
+000088ce  I_LSR_9                    
+00008db0  LED_OFF                    
+00008db6  LED_ON                     
+00008ad4  MSP430_SPI_Init            
+000089cc  MSP430_SPI_Rx              
+000088f4  MSP430_SPI_Tx              
+000000c0  OA0CTL0                    
+000000c1  OA0CTL1                    
+000000c2  OA1CTL0                    
+000000c3  OA1CTL1                    
+00000022  P1DIR                      
+00000025  P1IE                       
+00000024  P1IES                      
+00000023  P1IFG                      
+00000020  P1IN                       
+00000021  P1OUT                      
+00000027  P1REN                      
+00000026  P1SEL                      
+0000002a  P2DIR                      
+0000002d  P2IE                       
+0000002c  P2IES                      
+0000002b  P2IFG                      
+00000028  P2IN                       
+00000029  P2OUT                      
+0000002f  P2REN                      
+0000002e  P2SEL                      
+0000001a  P3DIR                      
+00000018  P3IN                       
+00000019  P3OUT                      
+00000010  P3REN                      
+0000001b  P3SEL                      
+0000001e  P4DIR                      
+0000001c  P4IN                       
+0000001d  P4OUT                      
+00000011  P4REN                      
+0000001f  P4SEL                      
+00008d36  PORT1_ISR                  
+00008d46  PORT2_ISR                  
+00008dbc  SPI_Buf_Reset              
+00008c7c  SPI_Buf_Send               
+00008bf6  SPI_Buf_Set_Output_Byte    
+00008d00  SPI_Buf_Set_Telegram_Length
+00008b08  SPI_CLKA_OFF               
+00008a12  SPI_CLKA_ON                
+00008bbc  SPI_Power_Down             
+00008654  SPI_Program_UserPage       
+00008810  SPI_Read_CU_Data           
+00008a58  SPI_Read_PCU_State         
+00008726  SPI_Read_SerialNum         
+00008774  SPI_Read_UserPage          
+00008d84  SPI_Set_Up_Telegram        
+0000020e  SPI_Stack                  
+00008b68  SPI_TRIM_WO_PROG           
+00008b92  SPI_TRIM_W_PROG            
+0000885c  SPI_Write_CU_Data          
+00008d56  Stop_SPI_WDT               
+00000172  TACCR0                     
+00000174  TACCR1                     
+00000176  TACCR2                     
+00000162  TACCTL0                    
+00000164  TACCTL1                    
+00000166  TACCTL2                    
+00000160  TACTL                      
+0000012e  TAIV                       
+00000170  TAR                        
+00000192  TBCCR0                     
+00000194  TBCCR1                     
+00000196  TBCCR2                     
+00000182  TBCCTL0                    
+00000184  TBCCTL1                    
+00000186  TBCCTL2                    
+00000180  TBCTL                      
+0000011e  TBIV                       
+00000190  TBR                        
+000084be  TI_SetDCO                  
+00000200  TRP_Data                   
+00008da0  Timer_A                    
+00008c12  Toggle_LED_500ms           
+0000005d  UCA0ABCTL                  
+00000062  UCA0BR0                    
+00000063  UCA0BR1                    
+00000060  UCA0CTL0                   
+00000061  UCA0CTL1                   
+0000005f  UCA0IRRCTL                 
+0000005e  UCA0IRTCTL                 
+00000064  UCA0MCTL                   
+00000066  UCA0RXBUF                  
+00000065  UCA0STAT                   
+00000067  UCA0TXBUF                  
+0000006a  UCB0BR0                    
+0000006b  UCB0BR1                    
+00000068  UCB0CTL0                   
+00000069  UCB0CTL1                   
+0000006c  UCB0I2CIE                  
+00000118  UCB0I2COA                  
+0000011a  UCB0I2CSA                  
+0000006e  UCB0RXBUF                  
+0000006d  UCB0STAT                   
+0000006f  UCB0TXBUF                  
+00000120  WDTCTL                     
+00008da8  Wait_for_Busy_low          
+00008cac  Wake_PaLFI                 
+00000600  __STACK_END                
+00000050  __STACK_SIZE               
+00008dc2  __TI_ISR_TRAP              
+0000ffe0  __TI_int00                 
+0000ffe2  __TI_int01                 
+0000ffe4  __TI_int02                 
+0000ffe6  __TI_int03                 
+0000ffe8  __TI_int04                 
+0000ffea  __TI_int05                 
+0000ffec  __TI_int06                 
+0000ffee  __TI_int07                 
+0000fff0  __TI_int08                 
+0000fff2  __TI_int09                 
+0000fff4  __TI_int10                 
+0000fff6  __TI_int11                 
+0000fff8  __TI_int12                 
+0000fffa  __TI_int13                 
+0000fffc  __TI_int14                 
+0000858a  __TI_printfi_minimal       
+ffffffff  __binit__                  
+00000200  __bss__                    
+ffffffff  __c_args__                 
+00008dfc  __cinit__                  
+00008cc2  __divu                     
+00000244  __end__                    
+00008dd0  __etext__                  
+00008cec  __mpyi                     
+00008cec  __mpyi_sw                  
+ffffffff  __pinit__                  
+00008cc2  __remu                     
+00008000  __text__                   
+0000893c  _auto_init                 
+00008c2e  _c_int00_noargs_noexit     
+0000fffe  _reset_vector              
+000005b0  _stack                     
+00008dc8  _system_pre_init           
+00008dcc  abort                      
+00008000  autotrim                   
+ffffffff  binit                      
+00000230  buf                        
+00008dfc  cinit                      
+00000244  end                        
+00008dd0  etext                      
+0000023c  first_run                  
+00008d72  func_epilog_1              
+00008d70  func_epilog_2              
+00008d6e  func_epilog_3              
+00008d6c  func_epilog_4              
+00008d6a  func_epilog_5              
+00008d68  func_epilog_6              
+00008d66  func_epilog_7              
+00000236  i                          
+0000023a  j                          
+000081e8  main                       
+00008c62  memccpy                    
+00008d24  memcpy                     
+00008cd8  memset                     
+ffffffff  pinit                      
+00000242  result                     
+00008a9c  sprintf                    
+00000241  status                     
+00008d76  strlen                     
+00000238  t                          
+0000023e  test                       
+0000022f  ucTX_ONLY                  
+00000240  ucWDT_Count                
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                       
+-------   ----                       
+00000000  IE1                        
+00000001  IE2                        
+00000002  IFG1                       
+00000003  IFG2                       
+00000010  P3REN                      
+00000011  P4REN                      
+00000018  P3IN                       
+00000019  P3OUT                      
+0000001a  P3DIR                      
+0000001b  P3SEL                      
+0000001c  P4IN                       
+0000001d  P4OUT                      
+0000001e  P4DIR                      
+0000001f  P4SEL                      
+00000020  P1IN                       
+00000021  P1OUT                      
+00000022  P1DIR                      
+00000023  P1IFG                      
+00000024  P1IES                      
+00000025  P1IE                       
+00000026  P1SEL                      
+00000027  P1REN                      
+00000028  P2IN                       
+00000029  P2OUT                      
+0000002a  P2DIR                      
+0000002b  P2IFG                      
+0000002c  P2IES                      
+0000002d  P2IE                       
+0000002e  P2SEL                      
+0000002f  P2REN                      
+00000048  ADC10DTC0                  
+00000049  ADC10DTC1                  
+0000004a  ADC10AE0                   
+0000004b  ADC10AE1                   
+00000050  __STACK_SIZE               
+00000053  BCSCTL3                    
+00000056  DCOCTL                     
+00000057  BCSCTL1                    
+00000058  BCSCTL2                    
+0000005d  UCA0ABCTL                  
+0000005e  UCA0IRTCTL                 
+0000005f  UCA0IRRCTL                 
+00000060  UCA0CTL0                   
+00000061  UCA0CTL1                   
+00000062  UCA0BR0                    
+00000063  UCA0BR1                    
+00000064  UCA0MCTL                   
+00000065  UCA0STAT                   
+00000066  UCA0RXBUF                  
+00000067  UCA0TXBUF                  
+00000068  UCB0CTL0                   
+00000069  UCB0CTL1                   
+0000006a  UCB0BR0                    
+0000006b  UCB0BR1                    
+0000006c  UCB0I2CIE                  
+0000006d  UCB0STAT                   
+0000006e  UCB0RXBUF                  
+0000006f  UCB0TXBUF                  
+000000c0  OA0CTL0                    
+000000c1  OA0CTL1                    
+000000c2  OA1CTL0                    
+000000c3  OA1CTL1                    
+00000118  UCB0I2COA                  
+0000011a  UCB0I2CSA                  
+0000011e  TBIV                       
+00000120  WDTCTL                     
+00000128  FCTL1                      
+0000012a  FCTL2                      
+0000012c  FCTL3                      
+0000012e  TAIV                       
+00000160  TACTL                      
+00000162  TACCTL0                    
+00000164  TACCTL1                    
+00000166  TACCTL2                    
+00000170  TAR                        
+00000172  TACCR0                     
+00000174  TACCR1                     
+00000176  TACCR2                     
+00000180  TBCTL                      
+00000182  TBCCTL0                    
+00000184  TBCCTL1                    
+00000186  TBCCTL2                    
+00000190  TBR                        
+00000192  TBCCR0                     
+00000194  TBCCR1                     
+00000196  TBCCR2                     
+000001b0  ADC10CTL0                  
+000001b2  ADC10CTL1                  
+000001b4  ADC10MEM                   
+000001bc  ADC10SA                    
+00000200  .bss                       
+00000200  TRP_Data                   
+00000200  __bss__                    
+0000020e  SPI_Stack                  
+0000022f  ucTX_ONLY                  
+00000230  buf                        
+00000236  i                          
+00000238  t                          
+0000023a  j                          
+0000023c  first_run                  
+0000023e  test                       
+00000240  ucWDT_Count                
+00000241  status                     
+00000242  result                     
+00000244  __end__                    
+00000244  end                        
+000005b0  _stack                     
+00000600  __STACK_END                
+000010f8  CALDCO_16MHZ               
+000010f9  CALBC1_16MHZ               
+000010fa  CALDCO_12MHZ               
+000010fb  CALBC1_12MHZ               
+000010fc  CALDCO_8MHZ                
+000010fd  CALBC1_8MHZ                
+000010fe  CALDCO_1MHZ                
+000010ff  CALBC1_1MHZ                
+00008000  .text                      
+00008000  __text__                   
+00008000  autotrim                   
+000081e8  main                       
+000084be  TI_SetDCO                  
+0000858a  __TI_printfi_minimal       
+00008654  SPI_Program_UserPage       
+00008726  SPI_Read_SerialNum         
+00008774  SPI_Read_UserPage          
+00008810  SPI_Read_CU_Data           
+0000885c  SPI_Write_CU_Data          
+000088a8  I_LSR                      
+000088b6  I_LSR_15                   
+000088ba  I_LSR_14                   
+000088be  I_LSR_13                   
+000088c2  I_LSR_12                   
+000088c6  I_LSR_11                   
+000088ca  I_LSR_10                   
+000088ce  I_LSR_9                    
+000088d2  I_LSR_8                    
+000088d6  I_LSR_7                    
+000088da  I_LSR_6                    
+000088de  I_LSR_5                    
+000088e2  I_LSR_4                    
+000088e6  I_LSR_3                    
+000088ea  I_LSR_2                    
+000088ee  I_LSR_1                    
+000088f4  MSP430_SPI_Tx              
+0000893c  _auto_init                 
+000089cc  MSP430_SPI_Rx              
+00008a12  SPI_CLKA_ON                
+00008a58  SPI_Read_PCU_State         
+00008a9c  sprintf                    
+00008ad4  MSP430_SPI_Init            
+00008b08  SPI_CLKA_OFF               
+00008b68  SPI_TRIM_WO_PROG           
+00008b92  SPI_TRIM_W_PROG            
+00008bbc  SPI_Power_Down             
+00008bda  Delay_500ms                
+00008bf6  SPI_Buf_Set_Output_Byte    
+00008c12  Toggle_LED_500ms           
+00008c2e  _c_int00_noargs_noexit     
+00008c62  memccpy                    
+00008c7c  SPI_Buf_Send               
+00008cac  Wake_PaLFI                 
+00008cc2  __divu                     
+00008cc2  __remu                     
+00008cd8  memset                     
+00008cec  __mpyi                     
+00008cec  __mpyi_sw                  
+00008d00  SPI_Buf_Set_Telegram_Length
+00008d24  memcpy                     
+00008d36  PORT1_ISR                  
+00008d46  PORT2_ISR                  
+00008d56  Stop_SPI_WDT               
+00008d66  func_epilog_7              
+00008d68  func_epilog_6              
+00008d6a  func_epilog_5              
+00008d6c  func_epilog_4              
+00008d6e  func_epilog_3              
+00008d70  func_epilog_2              
+00008d72  func_epilog_1              
+00008d76  strlen                     
+00008d84  SPI_Set_Up_Telegram        
+00008d90  ADC10_ISR                  
+00008d98  ErrorMode                  
+00008da0  Timer_A                    
+00008da8  Wait_for_Busy_low          
+00008db0  LED_OFF                    
+00008db6  LED_ON                     
+00008dbc  SPI_Buf_Reset              
+00008dc2  __TI_ISR_TRAP              
+00008dc8  _system_pre_init           
+00008dcc  C$$EXIT                    
+00008dcc  abort                      
+00008dd0  __etext__                  
+00008dd0  etext                      
+00008dfc  __cinit__                  
+00008dfc  cinit                      
+0000ffe0  __TI_int00                 
+0000ffe2  __TI_int01                 
+0000ffe4  __TI_int02                 
+0000ffe6  __TI_int03                 
+0000ffe8  __TI_int04                 
+0000ffea  __TI_int05                 
+0000ffec  __TI_int06                 
+0000ffee  __TI_int07                 
+0000fff0  __TI_int08                 
+0000fff2  __TI_int09                 
+0000fff4  __TI_int10                 
+0000fff6  __TI_int11                 
+0000fff8  __TI_int12                 
+0000fffa  __TI_int13                 
+0000fffc  __TI_int14                 
+0000fffe  _reset_vector              
+ffffffff  __binit__                  
+ffffffff  __c_args__                 
+ffffffff  __pinit__                  
+ffffffff  binit                      
+ffffffff  pinit                      
+
+[216 symbols]

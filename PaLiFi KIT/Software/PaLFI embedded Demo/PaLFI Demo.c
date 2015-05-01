@@ -24,6 +24,7 @@
 //******************************************************************************
 #include  "msp430x22x4.h"
 #include "stdlib.h"
+#include "stdio.h"
 #include "string.h"
 #include "intrinsics.h"
 #include "PaLFI_Transponder.h"
@@ -34,7 +35,7 @@ unsigned int i,t,j,first_run;
 unsigned short test;
 unsigned char  ucWDT_Count,status;
 int result;
-
+#define PIN_P10 0x08
 
 void main(void)
 {
@@ -51,8 +52,17 @@ void main(void)
 	P1DIR = 0xFF;                           // All P1.x outputs
 	P1OUT = 0;                              // All P1.x reset
 	P2OUT = 0;                              // All P2.x reset
+
+
+
+
 	P2DIR = 0xFC;                         	// Configure P2.x
 	P2OUT = 0;                              // All P2.x reset
+
+	//CODIGO PARA QUE P2 BIT 3 SE PONGA EN ALTO CUANDO ARRANQUE
+	P2DIR |= (1<<3); //P2.3 COMO SALIDA
+
+
 	P3SEL |= 0x30;                          // P3.4,5 = USCI_A0 TXD/RXD
 	P3DIR = 0xFB;                           // Configure P3.x
 	P3OUT = 0;                              // All P3.x reset
@@ -74,6 +84,8 @@ void main(void)
 
 	while (1)
 	{ 
+
+		P2OUT |= PIN_P10;
 	  
 	  if ((P1IFG & PUSH_BUTTON) == PUSH_BUTTON)	// Push Button Interrupt	
 	  {
@@ -101,7 +113,10 @@ void main(void)
 	  	/*****************  PaLFI is trimmed    ********************/	
 	  	
 		SPI_Read_UserPage(Page9,ucPageData);	// read Page9, how often should green LED blink
-		SPI_Program_UserPage(Page11,ucPageData);// programm Data in Page 11
+
+		//sprintf(ucPageData,"%.2X%.2X%.2X%.2X",0x01,0x02,0x03,0x04);
+
+		SPI_Program_UserPage(Page8,ucPageData);// programm Data in Page 11
 		SPI_Power_Down();						// Power down PaLFI
 		
 		UCB0CTL1 |= UCSWRST;					// deactivate SPI State machine

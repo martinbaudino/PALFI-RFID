@@ -30,9 +30,11 @@ void load(void)
         data.length=0x06;
         data.CMD1=0x06;
         data.CMD2=0;//sin bytes
-        data.PB1=0x19;//0x32;
+        //data.PB1=0x19;//0x32;
+        data.PB1=0x32;
         data.TXbits=0x08;
-        data.TXdata=0x20;
+        //data.TXdata=0x20;//0x7D;//=
+        data.TXdata=0x7D;
         data.PB2=0x00;
         data.RXbytes=0x0A;
         data.LRC=0;

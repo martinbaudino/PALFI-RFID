@@ -29,3 +29,33 @@
 	<stdlib.h>
 	<conio.h>
 
+1430402223 source:f:\documentos\github\palfi-rfid\rfid software\rfid soft\main_soft.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1429577126 source:f:\documentos\github\palfi-rfid\rfid software\rfid soft\puertoserie\comunicacion.c
+	"com/serial.h"
+
+1298731186 f:\documentos\github\palfi-rfid\rfid software\rfid soft\puertoserie\com\serial.h
+	"seriewindows.h"
+	"serielinux.h"
+
+1429044948 f:\documentos\github\palfi-rfid\rfid software\rfid soft\puertoserie\com\seriewindows.h
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	"baudios.h"
+
+1298723558 f:\documentos\github\palfi-rfid\rfid software\rfid soft\puertoserie\com\baudios.h
+
+1298734720 f:\documentos\github\palfi-rfid\rfid software\rfid soft\puertoserie\com\serielinux.h
+	<stdio.h>
+	<string.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<sys/time.h>
+	<termios.h>
+	<pthread.h>
+
